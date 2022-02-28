@@ -37,6 +37,10 @@ const baseStyles = css``;
 
 const Footer = styled.footer`
   ${baseStyles}
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Header = styled.header`
@@ -45,14 +49,24 @@ const Header = styled.header`
 
 const Main = styled.main`
   ${baseStyles};
+  width: 100%;
+  height: calc(100vh - 50px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
 `;
 
 const Section = styled.section`
   ${baseStyles};
+  display: flex;
+  justify-content: center;
 `;
 
 Container.propTypes = {
-  children: PropTypes.any.isRequired,
+  children: PropTypes.any,
   footer: PropTypes.bool,
   header: PropTypes.bool,
   main: PropTypes.bool,
